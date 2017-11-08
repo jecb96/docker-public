@@ -1,4 +1,4 @@
-## Dockerfile for Isabelle2016-1 with HOLCF
+## Dockerfile for Isabelle2017 with HOLCF
 ## for internal CI usage
 ## based on makarius/isabelle
 
@@ -25,9 +25,9 @@ USER isabelle
 
 # install Isabelle
 WORKDIR /home/isabelle
-RUN curl --fail --silent http://isabelle.in.tum.de/dist/Isabelle2016-1_app.tar.gz > Isabelle.tar.gz
+RUN curl --fail --silent http://isabelle.in.tum.de/dist/Isabelle2017_app.tar.gz > Isabelle.tar.gz
 RUN bsdtar xzf Isabelle.tar.gz && \
-  mv Isabelle2016-1 Isabelle && \
+  mv Isabelle2017 Isabelle && \
   rm -rf Isabelle.tar.gz Isabelle/contrib/jdk/x86-linux && \
   perl -pi -e 's,ISABELLE_HOME_USER=.*,ISABELLE_HOME_USER="\$USER_HOME/.isabelle",g;' Isabelle/etc/settings
   
