@@ -1,5 +1,5 @@
 ## Dockerfile for LaTeX (CI Usage)
-FROM ubuntu:latest
+FROM ubuntu:17.10
 SHELL ["/bin/bash", "-c"]
 
 ADD 01_nodoc /etc/dpkg/dpkg.cfg.d/01_nodoc
