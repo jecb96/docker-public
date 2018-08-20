@@ -20,7 +20,7 @@ RUN curl --fail --silent http://isabelle.in.tum.de/dist/Isabelle2018_linux.tar.g
     mv Isabelle2018 Isabelle && \
     rm -rf Isabelle.tar.gz Isabelle/contrib/jdk/x86-linux && \
     rm -f Isabelle/doc/*.pdf && \
-    sed -i -e 's@ISABELLE_HOME_USER=.*@'"ISABELLE_HOME_USER=$HOME/.isabelle"'@g' Isabelle/etc/settings
+    sed -i -e 's@ISABELLE_HOME_USER=.*@ISABELLE_HOME_USER="$USER_HOME/.isabelle"@g' Isabelle/etc/settings
 ENV PATH="/home/isabelle/Isabelle/bin:${PATH}"
 
 
