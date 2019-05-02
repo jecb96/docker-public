@@ -2,7 +2,8 @@ FROM ubuntu:latest
 
 ADD 01_nodoc /etc/dpkg/dpkg.cfg.d/01_nodoc
 
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install  -y  \
+RUN apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install  -y  \
     texlive-full \
 	biber \
 	curl \
