@@ -15,7 +15,6 @@ RUN apt-get update \
         gnuplot \
         make \
     && apt-get --purge -y remove tex.\*-doc$ \
-    && apt-get autoremove \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
