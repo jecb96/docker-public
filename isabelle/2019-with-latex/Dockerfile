@@ -42,4 +42,4 @@ ENV PATH="/home/isabelle/Isabelle/bin:${PATH}"
 # set up the logic 
 ARG DEF_LOGIC="HOLCF"
 RUN sed -i -e 's@ISABELLE_LOGIC=.*@'"ISABELLE_LOGIC=$DEF_LOGIC"'@g' Isabelle/etc/settings && \
-    isabelle build -s -b -j 4 -v HOLCF
+    isabelle build -b -j 4 -v HOLCF
